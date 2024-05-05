@@ -21,16 +21,18 @@ profiles:
     app:
       resources:
         cpu:
-          units: 1
+          units: 4
         memory:
-          size: 1Gi
+          size: 32Gi
         storage:
-          - size: 2Gi
-        # gpu:
-        #   units: 1
-        #   attributes:
-        #     vendor:
-        #       nvidia:
+          - size: 120Gi
+        gpu:
+          units: 1
+          attributes:
+            vendor:
+              nvidia:
+                - model: rtxa6000
+                - model: rtx8000
                 #- model: rtx3090
                 #- model: rtx4090
                 #- model: rtx3080
